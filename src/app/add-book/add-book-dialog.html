@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Add A Book:</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Book Name</mat-label>
+    <input matInput [(ngModel)]="data.book.name" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Book Owner</mat-label>
+    <input matInput [(ngModel)]="data.book.owner" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button class="mat-raised-button" (click)="close()">Close</button>
+  <button class="mat-raised-button mat-primary" [mat-dialog-close]="data.book">
+    Add
+  </button>
+</div>
